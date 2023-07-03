@@ -1,0 +1,39 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="dark:bg-black">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	body {
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url('/backgroundZTest.webp');
+    
+    background-size:cover;
+    
+} 
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(6, 209, 209) 30%, white 60%);
+	}
+</style>
