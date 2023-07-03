@@ -29,4 +29,6 @@ deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
   environment: production
   script:
+    - pnpm i
+    - pnpm run build
     - tar czvf  xol.ink-$CI_COMMIT_REF_SLUG.tar.gz dist/*
