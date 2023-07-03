@@ -24,4 +24,5 @@ build-job:       # This job runs in the build stage, which runs first.
     - pnpm i
     - pnpm run build 
   artifacts:
-    paths: dist/*
+    paths: 
+      - dist/*
