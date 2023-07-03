@@ -24,7 +24,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - npm i
+    - node npm i
     - npm run build 
 
 test-job:   # This job runs in the test stage.
