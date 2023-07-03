@@ -32,3 +32,6 @@ deploy-job:      # This job runs in the deploy stage.
     - pnpm i
     - pnpm run build
     - tar czvf  xol.ink-$CI_COMMIT_REF_SLUG.tar.gz dist/*
+  artifacts:
+    paths:
+      - xol.ink-$CI_COMMIT_REF_SLUG.tar.gz
