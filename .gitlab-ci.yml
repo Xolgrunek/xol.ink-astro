@@ -17,21 +17,11 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 stages:          # List of stages for jobs, and their order of execution
   - build
-  - deploy
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
     - pnpm i
     - pnpm run build 
-
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
-  script:
-    - pnpm i
-    - pnpm run build
-    - tar czvf  xol.ink-$CI_COMMIT_REF_SLUG.tar.gz dist/*
   artifacts:
-    paths:
-      - xol.ink-$CI_COMMIT_REF_SLUG.tar.gz
+    paths: dist/*
