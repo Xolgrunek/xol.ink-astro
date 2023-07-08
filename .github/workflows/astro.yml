@@ -47,23 +47,9 @@ jobs:
       run: pnpm install
     - name: Build with Astro
       run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+          pnpm astro build
       working-directory: ${{ env.BUILD_PATH }}
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
           path: ${{ env.BUILD_PATH }}/dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
