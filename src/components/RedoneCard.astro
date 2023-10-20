@@ -1,0 +1,69 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+	icon: string;
+}
+import { Icon } from 'astro-icon';
+
+const { href, title, body, icon } = Astro.props;
+---
+
+<li class="link-card">
+	<a href={href} target="_blank">
+	<div>
+		<Icon name={icon} height="1.5rem" width="1.5rem"></Icon>
+		<h2>
+			{title}
+		</h2>
+	</div>
+		<p>
+			{body}
+		</p>
+	</a>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 0.25rem;
+		background-color: slategrey;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 0.6rem;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+	}
+
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: 1rem 1.3rem;
+		border-radius: 0.35rem;
+		color: #ffff;
+		background-color: rgb(30 41 59);
+		opacity: 0.8;
+		font-weight:bold;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+		color: #444;
+		font-weight: bold;
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--test-accent-gradient);
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--test-accent));
+	}
+</style>

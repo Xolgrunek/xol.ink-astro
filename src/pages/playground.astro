@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RedoneCard from '../components/RedoneCard.astro';
+import { Icon } from 'astro-icon';
+---
+<Layout title="Test Page">
+    <main>
+    <ul class="link-card-grid">
+    <RedoneCard
+    href="https://github.com/Xolgrunek"
+    icon="mdi:twitch"
+    title='Twitch'
+    body=''
+    >
+    </RedoneCard>
+    <RedoneCard
+    href="https://github.com/Xolgrunek"
+    icon="mdi:github"
+    title='Github'
+    body=''
+    >
+    </RedoneCard>
+    <RedoneCard
+    href="https://github.com/Xolgrunek"
+    icon="mdi:twitter"
+    title='Twitter'
+    body=''
+    >
+    </RedoneCard>
+    <RedoneCard
+    href="https://github.com/Xolgrunek"
+    icon="mdi:patreon"
+    title='Patreon'
+    body=''
+    >
+    </RedoneCard>
+</ul>
+</main>
+</Layout>
+<style>
+    main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+
+</style>
