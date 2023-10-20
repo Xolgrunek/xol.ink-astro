@@ -3,12 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Xol Links!">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Xol.ink</span></h1>
 		<p class="instructions">
-			If you're here, you're in the wrong place!
+			If you're here, you're in the wrong place! Try these:
+			
 		</p>
+		<ul>
+			<li>
+				<a href="/@xol"><span class="button">Xol</span></a>
+			</li>
+			<li>
+				<a href="/@zrekae"><span class="button">Zrekae</span></a>
+			</li>
+		</ul>
 	</main>
 </Layout>
 
@@ -55,4 +64,12 @@ import Card from '../components/Card.astro';
 		gap: 1rem;
 		padding: 0;
 	}
+	a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
 </style>
