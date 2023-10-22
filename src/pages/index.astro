@@ -6,18 +6,19 @@ import Card from '../components/Card.astro';
 <Layout title="Welcome to Xol Links!">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Xol.ink</span></h1>
-		<p class="instructions">
+		<div class="instructions">
+		<p>
 			If you're here, you're in the wrong place! Try these:
-			
+			<ul>
+				<li>
+					<a class="text-gradient" href="/@xol"><span class="button">Xol</span></a>
+				</li>
+				<li>
+					<a  class="text-gradient" href="/@zrekae"><span class="button">Zrekae</span></a>
+				</li>
+			</ul>
 		</p>
-		<ul>
-			<li>
-				<a href="/@xol"><span class="button">Xol</span></a>
-			</li>
-			<li>
-				<a href="/@zrekae"><span class="button">Zrekae</span></a>
-			</li>
-		</ul>
+	</div>
 	</main>
 </Layout>
 
@@ -31,6 +32,7 @@ import Card from '../components/Card.astro';
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
+		color: white;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -72,4 +74,7 @@ import Card from '../components/Card.astro';
     text-decoration: none;
     color: initial;
 }
+	a.homepageLink {
+		color: purple;
+	}
 </style>
