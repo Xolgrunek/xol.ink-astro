@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RedoneCard from "../components/RedoneCard.astro";
+---
+
+<Layout title="Example Page">
+    <main>
+        <h1 class="text-5xl font-bold font-sans text-center text-slate-300">Example User
+        </h1>
+        <div class=" flex m-4 p-1 rounded-full w-48 max-w-sm 
+        bg-gradient-to-r from-blue-500 via-red-500 to-green-500
+        animate-gradient-x justify-center items-center mx-auto">
+            <img class="rounded-full object-contain w-96 mx-auto" id="zrekae-profile" src="/profiles/example/giphy.gif" >
+
+        </div>
+        <br />
+                <ul class="link-card-grid">
+        <RedoneCard 
+            href="https://example.com"
+            title="Twitch"
+            icon="mdi:twitch"
+            body=""
+        />
+        <RedoneCard 
+        href="https://example.com"
+        icon="ic:baseline-tiktok"
+        title="TikTok"
+        body=""
+        />
+        <RedoneCard
+        href="https://example.com"
+        title="Twitter"
+        icon="mdi:twitter"
+        body=""
+        />
+        <RedoneCard
+        href="https://example.com"
+        title="Discord"
+        icon="mdi:discord"
+        body=""
+        />
+ <!--        <Card
+            href="https://mas.to/@zrekae"
+            title="Mastodon"
+            body=""
+            />
+            -->
+        <RedoneCard
+        href="https://example.com"
+        title="Ko-FI"
+        icon="simple-icons:kofi"
+        body=""
+        />
+        <RedoneCard
+        href="https://example.com"
+        title='DeviantArt'
+        icon="mdi:deviantart"
+        body=''
+        />
+        <RedoneCard
+        href='https://example.com'
+        title='YouTube'
+        icon='mdi:youtube'
+        body=''
+        />
+        <RedoneCard
+        href="https://example.com"
+        title='Patreon'
+        icon='mdi:patreon'
+        body=''
+        />
+    </ul>
+    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+        </video>
+    </main>
+</Layout>
+<style>
+    main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: black;
+    opacity: 0.4;
+}
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: cover;
+    }
+}
+</style>
