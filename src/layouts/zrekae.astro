@@ -32,6 +32,18 @@ const { title } = Astro.props;
     background-size:cover;
     
 } 
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: 
+	  linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+	url("/profiles/zrekae/zBackgroundMobile.webp") no-repeat;
+      background-size: cover;
+    }
+}
 	:root {
 		--accent: 157, 210, 216;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(6, 209, 209) 30%, white 60%);
