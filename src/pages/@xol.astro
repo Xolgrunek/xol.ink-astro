@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/xol.astro';
 import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
 ---
 <Layout title="Xol's Links">
     <main>
         <h1 class="text-5xl font-bold font-sans text-center text-slate-300">Xol</h1>
         <div class=" flex m-4 p-1 rounded-full w-48 max-w-sm 
-        bg-gradient-to-r from-blue-500 via-red-500 to-green-500
+        bg-gradient-to-r from-purple-200 via-purple-500 to-purple-900
         animate-gradient-x justify-center items-center mx-auto">
             <img class="rounded-full object-contain w-96 mx-auto" id="zrekae-profile" src="/profiles/xol/xprofile.webp" >
 
@@ -17,11 +18,6 @@ import Card from '../components/Card.astro';
             href="https://twitch.tv/xolgrunek"
             title="Twitch"
             body=""
-        />
-        <Card 
-        href="https://kick.com/xolgrunek"
-        title="Kick"
-        body=""
         />
         <Card
         href="https://twitter.com/xolgrunek"
@@ -40,7 +36,7 @@ import Card from '../components/Card.astro';
             />
         <Card
         href="https://github.com/Xolgrunek"
-        title="Git"
+        title="Github"
         body=""
         />
         <Card
@@ -49,6 +45,7 @@ import Card from '../components/Card.astro';
         body=''
         />
     </ul>
+    
     </main>
 </Layout>
 <style>
@@ -63,5 +60,7 @@ import Card from '../components/Card.astro';
     gap: 1rem;
     padding: 0;
 }
-
+#zrekae-profile {
+    --webkit-mask-image: url(/favicon.ico)
+}
 </style>
