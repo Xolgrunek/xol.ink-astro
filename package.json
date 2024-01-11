@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/simple-icons": "^1.1.87",
     "astro": "^4.1.1",
     "astro-compress": "^2.2.7",
     "astro-icon": "^1.0.2",
