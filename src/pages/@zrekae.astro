@@ -5,14 +5,22 @@ import ZrekaeCard from '../components/ZrekaeCard.astro';
 ---
 <Layout title="Zrekae's Links">
     <main>
-        <h1 class="text-5xl font-bold font-sans text-center text-slate-300">Zrekae</h1>
+        <h1 class="text-5xl font-bold font-sans text-center text-gradient">Zrekae</h1>
         <div class=" flex m-4 p-1 rounded-full w-48 max-w-sm 
         bg-gradient-to-r from-blue-500 via-cyan-500 to-cyan-900
         animate-gradient-x justify-center items-center mx-auto">
             <img class="rounded-full object-contain w-96 mx-auto" id="zrekae-profile" alt="zrekae selfie" src="/profiles/zrekae/zrekae_new_profile.jpg" >
 
         </div>
-        <br />
+        
+        <!-- <div class="videoWrapper">
+        <iframe title="Latest YouTube Video"
+        src="https://www.youtube.com/embed?listType=playlist&list=UUNCkv4qa3Hp0-sSjLTauddQ">
+        </iframe>
+    </div>
+    -->
+    <br />
+        
                 <ul class="link-card-grid">
         <ZrekaeCard 
             href="https://twitch.tv/zrekae"
@@ -32,6 +40,7 @@ import ZrekaeCard from '../components/ZrekaeCard.astro';
         icon="mdi:twitter"
         body=""
         />
+        
         <ZrekaeCard
         href="https://xol.app/zdiscord"
         title="Discord"
@@ -69,7 +78,10 @@ import ZrekaeCard from '../components/ZrekaeCard.astro';
         body=''
         />
     </ul>
-    </main>
+
+</main>
+
+
 </Layout>
 <style>
     main {
@@ -83,5 +95,24 @@ import ZrekaeCard from '../components/ZrekaeCard.astro';
     gap: 1rem;
     padding: 0;
 }
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
 
+	}
 </style>
