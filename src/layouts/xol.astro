@@ -15,14 +15,13 @@ import Footer from '../components/Footer.astro';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="darkreader-lock">
 		<title>{title}</title>
 		<meta name='impact-site-verification' value='3c5e9a38-332a-435c-bb28-a2db03edd2ec'>
 	</head>
 	<body class="dark:bg-black">
 		<slot />
-<!-- 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
 	</body>
 	<Footer />
 </html>
