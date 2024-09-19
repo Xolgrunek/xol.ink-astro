@@ -1,0 +1,133 @@
+---
+import Layout from "../layouts/zrekae.astro";
+import Card from '../components/Card.astro';
+import ZrekaeCard from '../components/ZrekaeCard.astro';
+---
+ <Layout title="Zrekae's Clips">
+    <main>
+        <h1 class="text-5xl font-bold font-sans text-center text-gradient">Zrekae Clips from Elden Ring Marathon(WIP)</h1>
+
+        <ZrekaeCard 
+            href="https://www.twitch.tv/zrekae/clip/KathishDullCamelPeoplesChamp-ZA9g98xmh6urLFD9"
+            title="Godfrey, The First Elden Lord"
+            icon="mdi:twitch"
+            body=""
+        />
+        <ZrekaeCard 
+        href="https://www.twitch.tv/zrekae/clip/AwkwardEagerMageOhMyDog-vl2k-o7xxpMiCS06"
+        icon="mdi:twitch"
+        title="Skarde, Crucible's Betrayer"
+        body=""
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/DifficultSplendidHummingbirdTF2John-p6zRiTjPud94Z5h9"
+        title="Fire Giant"
+        icon="mdi:twitch"
+        body=""
+        />
+        
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/CrispyTawdryPassionfruitCoolStoryBob-5aOE_vto86deD-Kv"
+        title="Maliketh, the Black Blade"
+        icon="mdi:twitch"
+        body=""
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/GoldenArborealMonkeyTBTacoLeft-OYJnodAr4Q4Q-30V"
+        title="Shardbearer Mohg"
+        icon="mdi:twitch"
+        body=""
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/PricklyPlausibleLadiesJebaited-zezjk-YwhlfYbs7W"
+        title='Rellana, Twin Moon Knight'
+        icon="mdi:twitch"
+        body=''
+        />
+        <ZrekaeCard
+        href='https://www.twitch.tv/zrekae/clip/ResilientTubularSquidArsonNoSexy-MdvIlCdfAI5exfsI'
+        title='Margit, the Fell Omen'
+        icon='mdi:twitch'
+        body=''
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/MistySweetOpossumCclamChamp-IfVMe8Ww96fjtOKU"
+        title='Rennala, Queen of the Full Moon'
+        icon='mdi:twitch'
+        body=''
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/AmorphousCoyTermitePartyTime-fD-qiLmV7x9eC7Lu"
+        title='Einar, Ice Guardian'
+        icon='mdi:twitch'
+        body=''
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/CrypticAltruisticShieldBudStar-vwlE08qNejldGyGM"
+        title='Regal Ancestral Spirit'
+        icon='mdi:twitch'
+        body=''
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/CoweringRelatedGrassMoreCowbell-4S-h5YsDCIQmwFJt"
+        title='Godskin Noble'
+        icon='mdi:twitch'
+        body=''
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/CulturedCooperativeDragonflyPJSalt-iatDvzu8ZJICHJC_"
+        title='Mohg, the Omen'
+        icon='mdi:twitch'
+        body=''
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/PrettyStrangeTeaPeanutButterJellyTime-f-qXeTXLrKXuQOcV"
+        title='Sigur, Night`s Captain'
+        icon='mdi:twitch'
+        body=''
+        />
+        <ZrekaeCard
+        href="https://www.twitch.tv/zrekae/clip/TawdryClearShrewOMGScoots-MqpR203V99Vq2FRg"
+        title='Morgott, the Omen King'
+        icon='mdi:twitch'
+        body=''
+        />
+    </ul>
+    </main>
+
+ </Layout>
+
+
+ <style>
+    main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+
+	}
+</style>
