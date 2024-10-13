@@ -2,13 +2,15 @@
 import Layout from '../layouts/zrekae.astro';
 import Card from '../components/Card.astro';
 import ZrekaeCard from '../components/ZrekaeCard.astro';
+import { Picture } from 'astro:assets';
+import flower_color from '../flower_color.png'
 ---
 <Layout title="Zrekae's Links">
     <main>
         <h1 class="text-5xl font-bold font-sans text-center text-gradient">Zrekae</h1>
         <div class="flex m-4 p-1 rounded-full w-48 max-w-sm 
         justify-center items-center mx-auto">
-            <img class="rounded-full object-contain w-96 mx-auto" id="zrekae-profile" alt="zrekae selfie" src="/profiles/zrekae/flower_color.png" >
+            <Picture class="object-contain w-96 mx-auto" formats={['avif', 'webp']} loading={'eager'} id="zrekae-profile" alt="zrekae selfie" src={flower_color}>
 
         </div>
         
